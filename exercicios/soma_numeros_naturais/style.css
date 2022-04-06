@@ -1,0 +1,27 @@
+body{
+    background-color: rgb(46, 65, 97);
+    font: normal 15pt Arial;
+    color:white;
+    text-align: center;
+}
+
+section{
+    background-color: white;
+    color: black;
+    margin: auto;
+    padding: 15px;
+    width: 400px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.386);
+    
+}
+
+#button{
+    font-size: 15pt;;
+    padding: 7px;
+    cursor: pointer;
+}
+
+footer{
+    font-style: italic;
+}

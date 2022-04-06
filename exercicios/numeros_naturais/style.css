@@ -26,3 +26,8 @@ input{
 select{
     width: 150px;
 }
+
+footer{
+    font-style: italic;
+    color: white;
+}
