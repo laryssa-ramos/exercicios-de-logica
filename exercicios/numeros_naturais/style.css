@@ -1,0 +1,28 @@
+body{
+    font: normal 15pt arial;
+    background-color: rgb(138, 32, 66);
+    text-align: center;
+}
+
+header{
+    color: white;
+}
+
+section{
+    background-color: white;
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.352);
+    
+}
+
+input{
+    cursor: pointer;
+    font-size: 15pt;
+}
+
+select{
+    width: 150px;
+}
