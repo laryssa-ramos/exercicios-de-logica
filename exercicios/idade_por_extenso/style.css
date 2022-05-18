@@ -1,0 +1,35 @@
+body{
+    background: violet;
+    font-family: normal Arial, Helvetica, sans-serif;
+    font-size: 15pt;
+    text-align: center;
+}
+
+main{
+    background: white;
+    width: 500px;
+    margin: auto;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.463);
+}
+
+#date{
+    cursor: pointer;
+}
+
+#button{
+    padding: 8px 15px 8px 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    background:rgb(185, 121, 132);
+    color: white;
+    transition: background .2s;
+}
+ #button:hover{
+     background:rgb(188, 138, 146);
+ }
+
+footer{
+    font-style: italic;
+}
