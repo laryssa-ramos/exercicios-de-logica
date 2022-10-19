@@ -1,0 +1,96 @@
+<!-- Considere um programa que deve classificar um número como par ou ímpar e, além disso, classificar ele como menor do que 100 ou maior ou igual a 100. Escreva um programa que faça essa classificação corretamente. -->
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificação dos Números</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+            background-color: rgb(40, 77, 40);
+        }
+        h1{
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+        main{
+            background-color: #eee;
+            width: 500px;
+            height: 200px;
+            padding: 15px;
+            margin: auto;
+            border-radius: 10px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 15pt;
+        }
+        main input{
+            padding: 5px 10px;
+        }
+
+        main #button{
+            font-size: 15pt;
+            font-weight: bold;
+            color: rgb(235, 241, 235);
+            background-color: rgb(22, 110, 22);
+            border-radius: 7px;
+            transition: background .2s;
+            cursor: pointer;
+        }
+
+        main #p2{
+            padding: 20px 0;
+        } 
+
+        main #button:hover{
+            background: rgb(236, 243, 159);
+            color: rgb(22, 110, 22);
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Classificação dos Números</h1>
+    <main>
+        <p>Informe o número: <input type="number" name="num" id="num"></p>
+        <p id="p2"><input type="button" value="Classificar" id="button" onclick="Classificar()"></p>
+        <div id="res"></div>
+    </main>
+
+    <script>
+
+        function Classificar(){
+            let num = document.getElementById("num");
+            let res = document.getElementById("res");
+            let number = Number(num.value);
+            let par_impar = '';
+            let menor_maior = '';
+
+            if(number % 2 == 0){
+                par_impar = 'par';
+            }else{
+                par_impar = 'ímpar';
+            }
+
+            if(number < 100 ){
+                menor_maior = 'menor que';
+
+            }else if(number == 100){
+                menor_maior = 'igual a';
+
+            }else{
+                menor_maior = 'maior que';
+            }
+
+            res.innerHTML = `O número é ${par_impar} e é ${menor_maior} 100.`;
+        }
+
+    </script>
+</body>
+</html>

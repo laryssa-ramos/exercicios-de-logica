@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <main>
+        <div class="soma">
+            <h3>Soma</h3>
+                <input type="number" id="soma1"> +  
+                <input type="number" id="soma2">
+                <input class="btn" type="button" value="=" onclick="Somar()"><div id="soma"></div>
+            
+        </div>
+        <div class="subt">
+            <h3>Subtração</h3>
+                <input type="number" id="subt1"> &minus;  
+                <input type="number" id="subt2">
+                <input class="btn" type="button" value="=" onclick="Subtrair()"><div id="subt"></div>
+        </div>
+        <div class="mult">
+            <h3>Multiplicação</h3>
+                <input type="number" id="mult1"> &times;  
+                <input type="number" id="mult2">
+                <input class="btn" type="button" value="="  onclick="Multiplicar()"><div id="mult"></div>
+        </div>
+        <div class="divi">
+            <h3>Divisão</h3>
+                <input type="number" id="divi1"> &divide; 
+                <input type="number" id="divi2">
+                <input class="btn" type="button" value="="  onclick="Dividir()"><div id="divi"></div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy;Praticando</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
