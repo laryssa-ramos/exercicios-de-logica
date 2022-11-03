@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="pt-r">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INSS</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(146, 146, 146);
+        }
+
+        h1{
+            display: flex;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        .container{
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            
+        }
+
+        .main{
+            position: relative;
+            padding: 2rem 2rem 8rem 2rem;
+            background-color: #fff;
+            border-radius: .5rem;
+            width: 25rem;
+        }
+
+        #nome,
+        #idade{
+            width: 20rem;
+        }
+
+        #contribuicao{
+            width: 12.3rem;
+        }
+
+        p{
+            margin: 0.7rem;
+        }
+        
+
+        .input{
+            height: 1.3rem;
+
+        }
+        
+        .button{
+            position: absolute;
+            left: 11rem;
+            padding: 0.4rem;
+            margin-top: 0.7rem;
+            width: 6rem;
+            background-color: lightgray;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            transition: .2s linear;
+        }
+
+        .button:hover{
+            background-color: rgb(120, 128, 243);
+            color: white;
+        }
+
+        .resultado{
+            position: absolute;
+            bottom: 2.3rem;
+            width: 24rem ;
+        }
+
+       
+    </style>
+</head>
+<body>
+    <h1>INSS</h1>
+    <div class="container">
+        <main class="main">
+            <div class="nome">
+                <p>
+                    Nome:  
+                    <input class="input" type="text" name="nome" id="nome">
+                </p>
+            </div>
+            <div class="idade">
+                <p>
+                    Idade:
+                    <input class="input" type="number" name="idade" id="idade">
+                </p>
+            </div>
+            <div class="contribuicao">
+                <p>
+                    Tempo de Contribuição:
+                    <input class="input" type="number" name="contribuicao" id="contribuicao">
+                </p>
+            </div>
+            <div class="genero">
+                <p>Gênero:
+                    <input type="radio" name="radsex" id="mas" checked>
+                    <label for="mas">Masculino</label>
+                    <input type="radio" name="radsex" id="fem">
+                    <label for="fem">Feminino</label>
+                </p>
+            </div>
+            <input type="button" value="Calcular" class="button" onclick="calcular()">
+            
+            <div class="resultado"></div>
+        </main>
+    </div>
+
+    <script>
+
+// fano.value.length == 0 || Number(fano.value) > ano){
+//         window.alert('[ERRO] Verifique os dados e tente novamente')
+
+        function calcular(){
+
+            let name = document.querySelector("#nome");
+            let idade = document.querySelector("#idade");
+            let contribuicao = document.querySelector("#contribuicao");
+            let fsex = document.getElementsByName("radsex");
+            let res = document.querySelector(".resultado");
+
+            if(name.value.length == 0 || idade.value.length == 0 || contribuicao.value.length == 0 || idade.value < 16 || contribuicao.value < 0 ){
+
+                alert("[ERRO] Verifique os dados e tente novamente")
+
+            }else{
+
+                if(fsex[0].checked && idade.value >= 65 && contribuicao.value >= 10 || fsex[0].checked && idade.value >= 63 && contribuicao.value >= 15){
+                
+                res.innerHTML = `${name.value} é um homem de ${idade.value} anos e tem ${contribuicao.value} anos de contribuição, portanto é aposentável.`;
+
+           }else if(fsex[1].checked && idade.value >= 63 && contribuicao.value >= 10 || fsex[1].checked && idade.value >= 61 && contribuicao.value >= 15){
+
+               res.innerHTML = `${name.value} é uma mulher de ${idade.value} anos e tem ${contribuicao.value} anos de contribuição, portanto é aposentável.`;
+
+           }else{
+
+               res.innerHTML = `${nome.value} não cumpre todos os requisitos para a aposentadoria, portanto não é aposentável.`;
+           }
+
+            }
+
+            
+        }
+
+       
+
+    </script>
+</body>
+</html>
