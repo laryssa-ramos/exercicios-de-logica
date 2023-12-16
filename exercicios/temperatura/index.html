@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperatura</title>
+</head>
+<body>
+    <div class="box">
+        <h2>Temperatura</h2>
+
+        <div class="temperatura">
+            <span class="celsius">ºC:</span>
+            <input type="number" id="celsius" onkeyup="Celsius()"> =    
+
+            <span class="celsius">ºF:</span>
+            <input type="number" id="fahrenheit" onkeyup="Fahrenheit()"> 
+            
+        </div>
+    </div>
+    <script>
+         
+         
+         function Celsius(){
+            var celsius = document.getElementById("celsius").value;
+            var fahrenheit;
+
+            fahrenheit = (9*celsius+160)/5;
+            document.getElementById("fahrenheit").value = fahrenheit;
+            
+           
+        }
+
+           
+        function Fahrenheit(){
+            var fahrenheit = document.getElementById("fahrenheit").value;
+            var celsius;
+
+            celsius = (fahrenheit-32)*5/9;
+            document.getElementById("celsius").value = celsius;
+           
+        }
+
+    </script>
+    <script src="jquery-3.7.0.min.js"></script>
+</body>
+</html>

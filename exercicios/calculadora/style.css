@@ -31,12 +31,22 @@ div{
 .btn{
     margin-left:5px;
     cursor: pointer;
+    padding: 0 .7rem;
+}
+
+.btn:hover{
+    background-color: antiquewhite;
 }
 
 footer{
+    position: absolute;
+    bottom: 1rem;
+    left: 45%;
     color: white;
     font-style: italic;
     text-align: center;
     padding: 10px;
 }
+
+
 

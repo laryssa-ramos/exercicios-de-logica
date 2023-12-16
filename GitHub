@@ -1,0 +1,17 @@
+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
+
+echo "# teste" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/laryssa-ramos/teste.git
+git push -u origin master
+
+
+
+
+
+git remote add origin https://github.com/laryssa-ramos/teste.git
+git branch -M master
+git push -u origin master
